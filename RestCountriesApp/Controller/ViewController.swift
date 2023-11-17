@@ -40,11 +40,40 @@ class ViewController: UITableViewController {
         if sender.state == UIGestureRecognizer.State.began {
             let touchPoint = sender.location(in: tableView)
             if let indexPath = tableView.indexPathForRow(at: touchPoint){
-                basicActionSheet(title: countries[indexPath.row].name.common, message: String("Population: \(countries[indexPath.row].population)"))
+                
+                countryInfoAlert(for: countries[indexPath.row])
+
             }
         }
     }
+    
+    private func countryInfoAlert (for country: Country) {
+        let alert = UIAlertController(
+            title: country.name.common,
+            message: "Capital: \(country.capital?.joined() ?? "error")\n Population: \(String(country.population))\n Region: \(country.region)",
+            preferredStyle: .alert
+        )
         
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @objc private func infoPressed(){
+        let alert = UIAlertController(
+            title: "Info",
+            message: "The RestCountriesApp is the 9th project in the iOS Bootcamp by Accenture. The project is authored by Anastasiya Omak",
+            preferredStyle: .actionSheet
+        )
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
     private func setupNavigationBar() {
         
         self.title = "Countries"
@@ -75,17 +104,18 @@ class ViewController: UITableViewController {
         openSettingAction()
     }
     
-    @objc private func infoPressed(){
-        basicActionSheet(title: "Info", message: "The RestCountriesApp is the 9th project in the iOS Bootcamp by Accenture. The project is authored by Anastasiya Omak.")
-    }
-    
-    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countries.count
     }
     
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let country = countries[indexPath.row]
+        let detailVC = DetailViewController()
+        detailVC.configureUI(with: country)
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,37 +123,35 @@ class ViewController: UITableViewController {
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID, for:indexPath  as IndexPath)
         cell = UITableViewCell(style:UITableViewCell.CellStyle.subtitle,reuseIdentifier: cellID)
         
+        
         let country = self.countries[indexPath.row]
+        
         cell.textLabel?.text = country.name.common
         cell.detailTextLabel?.text = country.name.official
-        cell.imageView?.image = UIImage()
+        cell.textLabel?.font = .boldSystemFont(ofSize: 20)
+        cell.detailTextLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+        cell.detailTextLabel?.numberOfLines = 0
+        
+        
+        // MARK: - ImageCell
+        
+        if let url = URL(string: country.flags.png) {
+                if let data = try? Data(contentsOf: url) {
+                    if let image = UIImage(data: data)?.sd_resizedImage(with: CGSize(width: 40.0, height: 40.0) , scaleMode: .aspectFit) {
+                        cell.imageView?.image = image
+                    }
+                }
+            }
         
         return cell
     }
 }
-
-
-
-
-extension ViewController {
-    private func basicActionSheet(title: String?, message: String?){
-        DispatchQueue.main.async {
-            let actionSheet: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-            let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel)
-            
-            actionSheet.addAction(cancelAction)
-            self.present(actionSheet, animated: true)
-        }
-    }
     
     private func openSettingAction(){
-        DispatchQueue.main.async {
-            if let settingsUrl = URL(string: UIApplication.openSettingsURLString) {
-                if UIApplication.shared.canOpenURL(settingsUrl) {
-                    UIApplication.shared.open(settingsUrl, options: [:], completionHandler: nil)
-                }
-            }
-
+        
+        if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+            UIApplication.shared.open(settingsURL)
+        } else {
+            print("Error: Invalid value UIApplication.openSettingsURLString")
         }
     }
-}

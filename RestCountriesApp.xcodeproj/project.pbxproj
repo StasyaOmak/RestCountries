@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F387DDA2B0640ED00CBA6B0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6F387DD92B0640ED00CBA6B0 /* SDWebImage */; };
 		6F387DDC2B0640ED00CBA6B0 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6F387DDB2B0640ED00CBA6B0 /* SDWebImageMapKit */; };
+		6F387DDE2B0648EB00CBA6B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F387DDD2B0648EB00CBA6B0 /* DetailViewController.swift */; };
 		6FE0D3412B052D4000B804C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE0D3402B052D4000B804C9 /* AppDelegate.swift */; };
 		6FE0D3432B052D4000B804C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE0D3422B052D4000B804C9 /* SceneDelegate.swift */; };
 		6FE0D3452B052D4000B804C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE0D3442B052D4000B804C9 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F387DDD2B0648EB00CBA6B0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6FE0D33D2B052D4000B804C9 /* RestCountriesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestCountriesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE0D3402B052D4000B804C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FE0D3422B052D4000B804C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				6FE0D3442B052D4000B804C9 /* ViewController.swift */,
+				6F387DDD2B0648EB00CBA6B0 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				6FE0D35A2B0532D900B804C9 /* Country.swift in Sources */,
 				6FE0D3452B052D4000B804C9 /* ViewController.swift in Sources */,
 				6FE0D35D2B05338200B804C9 /* NetworkManager.swift in Sources */,
+				6F387DDE2B0648EB00CBA6B0 /* DetailViewController.swift in Sources */,
 				6FE0D3412B052D4000B804C9 /* AppDelegate.swift in Sources */,
 				6FE0D3432B052D4000B804C9 /* SceneDelegate.swift in Sources */,
 			);
