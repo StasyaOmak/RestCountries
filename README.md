@@ -37,6 +37,7 @@ RestCountriesApp includes the following key features:
 
 
 ## Screenshots
+
 ![Simulator Screen Recording - iPhone SE (3rd generation) - 2023-11-17 at 09 07 34 (1)](https://github.com/StasyaOmak/RestCountriesApp/assets/127408467/6f9e799e-0df5-45df-9060-a25e90ed3930)  ![Simulator Screenshot - iPhone SE (3rd generation) - 2023-11-17 at 09 06 29](https://github.com/StasyaOmak/RestCountriesApp/assets/127408467/50fa86c5-831f-4c3d-95d1-571ea7669720)
 
 ![Simulator Screenshot - iPhone SE (3rd generation) - 2023-11-17 at 09 06 29](https://github.com/StasyaOmak/RestCountriesApp/assets/127408467/bf3e89fc-d84f-4e79-8fbd-6e44945fd1be) ![Simulator Screenshot - iPhone SE (3rd generation) - 2023-11-17 at 09 07 43](https://github.com/StasyaOmak/RestCountriesApp/assets/127408467/eb768189-3f20-4516-bf06-c74adca69f56)
