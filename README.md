@@ -37,9 +37,8 @@ RestCountriesApp includes the following key features:
 
 
 ## Screenshots
+![Simulator Screen Recording - iPhone SE (3rd generation) - 2023-11-17 at 09 07 34 (1)](https://github.com/StasyaOmak/RestCountriesApp/assets/127408467/6f9e799e-0df5-45df-9060-a25e90ed3930)  ![Simulator Screenshot - iPhone SE (3rd generation) - 2023-11-17 at 09 06 29](https://github.com/StasyaOmak/RestCountriesApp/assets/127408467/50fa86c5-831f-4c3d-95d1-571ea7669720)
 
-![Simulator Screen Recording - iPhone SE (3rd generation) - 2023-11-17 at 09 07 34 (1)](https://github.com/StasyaOmak/Test_Code-Storybord/assets/127408467/edd0076f-a682-4a0e-823c-b72661e74818) ![Simulator Screenshot - iPhone SE (3rd generation) - 2023-11-17 at 09 07 43](https://github.com/StasyaOmak/Test_Code-Storybord/assets/127408467/6a1bad69-ad0f-416c-b556-4aaf2912e043)
+![Simulator Screenshot - iPhone SE (3rd generation) - 2023-11-17 at 09 06 29](https://github.com/StasyaOmak/RestCountriesApp/assets/127408467/bf3e89fc-d84f-4e79-8fbd-6e44945fd1be) ![Simulator Screenshot - iPhone SE (3rd generation) - 2023-11-17 at 09 07 43](https://github.com/StasyaOmak/RestCountriesApp/assets/127408467/eb768189-3f20-4516-bf06-c74adca69f56)
 
-
-![Simulator Screenshot - iPhone SE (3rd generation) - 2023-11-17 at 09 06 33](https://github.com/StasyaOmak/Test_Code-Storybord/assets/127408467/3e2d06cb-f44c-4060-8ff2-b0993adbe2e2) ![Simulator Screenshot - iPhone SE (3rd generation) - 2023-11-17 at 09 06 29](https://github.com/StasyaOmak/Test_Code-Storybord/assets/127408467/84eb109c-8b6a-4b99-a920-d5a5fc6ed4aa)
 
